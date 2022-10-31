@@ -1,0 +1,184 @@
+nav {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(23, 22, 22);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 90vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  /* -------------------------------------------------------------nav-inner-container------------------------------------------- */
+  .nav-container {
+    width: 90%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo search fav";
+    position: absolute;
+    top: 0px;
+    left: 5vw;
+  }
+  /* --------------------------logo-component-------------------------- */
+  #logo-icon-container {
+    height: 100%;
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo {
+    width: 100px;
+    height: 30px;
+    background: url(./image/imdb-logo.png);
+    background-size:cover ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  #logo > a > img {
+    height: 45px;
+    width: 100px;
+   
+  }
+  /* --------------------------search-bar-component-------------------------- */
+  #search-container {
+    height: 100%;
+    grid-area: search;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #search-bar {
+    width: 80%;
+    height: 60%;
+    padding: 0 25px;
+    color: black;
+  }
+  
+  /* --------------------------watchlist-component-------------------------- */
+  #fav-icon-container {
+    height: 100%;
+    grid-area: fav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #fav-icon-container > #fav {
+    width: 90%;
+    margin: 0px auto;
+  }
+  
+  #fav-icon-container > #fav > a > span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  #fav-icon-container > #fav > a > span > i {
+    font-size: 25px;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    nav {
+      height: 20vh;
+    }
+    .nav-container {
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+      /* padding:20px 10px; */
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "logo fav"
+        "search search";
+    }
+  }
+
+
+/* ----------------------------------------------------------end of -nav-inner-container------------------------------------------- */
+  
+  #search-result-outer-container {
+    width: 90%;
+    position: fixed;
+    top: 10vh;
+    left: 5%;
+    z-index: 1;
+  }
+  
+  #search-result-container {
+    background-color: rgb(69, 69, 72);
+    overflow-y: auto;
+    list-style-type: none;
+    width: 90%;
+    /* min-width: 420px; */
+    margin: auto;
+    box-sizing: border-box;
+    max-height: 90vh;
+  }
+  /* ---------------to hide the searhc-resutl-contaier--------- */
+  .hide-search-container {
+    display: none;
+  }
+  
+  #search-result-container > li {
+    padding: 10px 10px;
+  }
+  
+  /* --------------------if movies is not found container ----------------------------- */
+  #not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #not-found-container > h1 {
+    font-size: 20px;
+    color: rgb(145, 136, 136);
+  }
+  
+  /* -----------------------------if movie found container------------------------ */
+  
+  #search-result-movie-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    background-color: rgb(29, 28, 28);
+    padding: 10px;
+    width: 90%;
+    margin: 4px 0px;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  #search-result-img-container {
+    height: 100px;
+    width: 100px;
+  }
+  #search-result-img-container > a > img {
+    height: 100px;
+    width: 100px;
+  }
+  
+   @media only screen and (max-width: 550px) {
+    #search-result-outer-container {
+      top: 22vh;
+      /* width: 100%; */
+    }
+    /* #search-result-container {
+      width: 100%;
+      margin:0px;
+      background-color: antiquewhite;
+    }
+    #search-result-movie-card {
+     width: 100%;
+      margin: 0px;
+    } */
+  }
+   

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMDb</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXEn4YivCexFlU2NlhQtkIr_LdXe42I4CmWdzolXAIcZyDtXXgUwaeH3DviFdfVy8sVA&usqp=CAU"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="detail.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="footer.css" />
+
+   
+    <!-- script for reusable components header and footer -->
+
+    <script src="components.js"></script>
+    
+  </head>
+  <body>
+    <!-- reusable navbar with search contaner -->
+    <navbar-component></navbar-component>
+
+    <section id="movie-details">
+      <div class="container">
+        <div id="title-container"><h1>Movie Name</h1></div>
+        <div id="rating-container"></div>
+        <div id="poster-container">
+          <!-- script injects poster -->
+        </div>
+        <div id="short-details-container">
+          <!-- script injects plot -->
+          <div>
+            <div>
+              <!-- script injects details of a movies -->
+            </div>
+          </div>
+        </div>
+        <div id="details-container"></div>
+        <div id="watchlist-container">
+          <!-- script injects a button -->
+        </div>
+      </div>
+
+      <div id="cast-container">
+        <ul id="movie-cast">
+          <!-- script injects the cast cards -->
+        </ul>
+      </div>
+
+      <div id="similar-movie-container">
+        <ul id="similar-movie-list">
+          <!-- script injects the li similar movies cards -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- reusable footer -->
+    <footer-component></footer-component>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous">
+    </script>
+    
+    <script src="script.js"></script>
+    <script src="movieDetail.js" type="module"></script>
+    <script src="addToFav.js" type="module"></script>
+    <script src="watchLatter.js" type="module"></script>
+  </body>
+</html>

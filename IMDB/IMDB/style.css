@@ -1,0 +1,25 @@
+*{
+    margin:0px;
+    padding: 0px;
+    color:rgb(241, 241, 239);
+}
+body{
+    width: 100%;
+    background-color: black;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link{
+    color:transparent;
+}
+a h6:hover {
+   color: brown;
+    background-color: rgb(233, 217, 214);
+    border-radius: 20%;
+}
+
+a:hover{
+    color: rgb(55, 219, 118);
+}
